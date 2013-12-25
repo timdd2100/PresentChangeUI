@@ -16,12 +16,12 @@
 @end
 
 @implementation PeopleAddViewController
-@synthesize LPeopleName,LPresentName,peopleName;
+@synthesize LPeopleName,LPresentName;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    dataSource *temp = [dataSource getDataSource];
+    //dataSource *temp = [dataSource getDataSource];
     
     
 }
