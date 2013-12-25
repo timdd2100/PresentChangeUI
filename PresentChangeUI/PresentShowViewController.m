@@ -7,6 +7,7 @@
 //
 
 #import "PresentShowViewController.h"
+#import "dataSource.h"
 
 @interface PresentShowViewController ()
 
@@ -44,5 +45,27 @@
     return YES;
 }
 */
+
+#pragma -mark tableViewController delegate
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    dataSource *data = [dataSource getDataSource];
+    return [data.PresentDataSource count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"CompanyCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+        return cell;
+}
+
+
 
 @end

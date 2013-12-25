@@ -31,6 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //先定義出共用資源
     [dataSource getDataSource];
     
     PeopleDataSource = [[NSMutableArray alloc]init];

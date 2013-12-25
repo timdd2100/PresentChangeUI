@@ -10,7 +10,9 @@
 
 @interface dataSource : NSObject
 
+
 +(id)getDataSource;
 
-
+@property NSMutableArray *PeopleDataSource;
+@property NSMutableArray *PresentDataSource;
 @end

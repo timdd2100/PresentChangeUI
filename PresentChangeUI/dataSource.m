@@ -10,14 +10,11 @@
 
 static dataSource *source;
 
-@interface dataSource ()
 
-@property NSMutableArray *PeopleDataSource;
-@property NSMutableArray *PresentDataSource;
-@end
 
 
 @implementation dataSource
+@synthesize PeopleDataSource,PresentDataSource;
 
 /*
  singleton-class
@@ -33,7 +30,17 @@ static dataSource *source;
         source.PeopleDataSource = [NSMutableArray new];
         source.PresentDataSource = [NSMutableArray new];
     }
-    return self;
+    return source;
+}
+
+-(NSMutableArray *)getPeopleDataSource
+{
+    return PeopleDataSource;
+}
+
+-(NSMutableArray *)getPresentDataSource
+{
+    return PresentDataSource;
 }
 
 @end

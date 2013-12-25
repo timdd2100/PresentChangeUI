@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "PeopleAddViewController.h"
 
 //全域變數
 //-----------
@@ -44,6 +45,7 @@ static UIPopoverController* popAddPeople;
         if([[segue identifier] isEqualToString:@"PeopleAddSegue"])
         {
             popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+            
         }
     }
     else
@@ -51,7 +53,12 @@ static UIPopoverController* popAddPeople;
         NSLog(@"關閉先前的Popover");
         [popAddPeople dismissPopoverAnimated:YES];
         popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+        
     }
+    
+    //
+    PeopleAddViewController *p = (PeopleAddViewController *)segue.destinationViewController;
+    p.parent = self;
 }
 
 

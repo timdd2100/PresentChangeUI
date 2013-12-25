@@ -9,7 +9,7 @@
 #import "PeopleAddViewController.h"
 #import "People.h"
 #import "dataSource.h"
-
+#import "Present.h"
 
 @interface PeopleAddViewController ()
 
@@ -77,6 +77,19 @@
 
 #pragma -mark Join Event
 - (IBAction)JoinButton:(id)sender {
-        [[self.parent getPopover] dismissPopoverAnimated:YES];
-    }
+    
+    /*
+     將人員和禮品資訊加入到共用的dataSource中
+    */
+    dataSource *data = [dataSource getDataSource];
+
+    NSMutableArray *people = data.PeopleDataSource;
+    NSMutableArray *present = data.PresentDataSource;
+    
+    [people addObject:[[People alloc]initWithName:LPeopleName.text]];
+    [present addObject:[[Present alloc]initWithName:LPresentName.text]];
+    
+    //呼叫 母viewController 關閉popover
+    [[self.parent getPopover] dismissPopoverAnimated:YES];
+}
 @end
