@@ -1,23 +1,16 @@
 //
-//  AppDelegate.h
+//  TabBarVIewController.h
 //  PresentChangeUI
 //
-//  Created by timkao on 13/12/24.
+//  Created by timkao on 13/12/25.
 //  Copyright (c) 2013年 skl. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface TabBarVIewController : UITabBarController
 {
     NSMutableArray *PeopleDataSource;
     NSMutableArray *PresentDataSource;
 }
-
-
-@property (strong, nonatomic) UIWindow *window;
-
-
-
-
 @end

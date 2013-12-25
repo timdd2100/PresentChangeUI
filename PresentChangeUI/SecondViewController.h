@@ -10,4 +10,11 @@
 
 @interface SecondViewController : UIViewController
 
+@property (nonatomic, strong)NSMutableArray *PeopleDataSource;
+@property (nonatomic, strong)NSMutableArray *PresentDataSource;
+
+-(UIPopoverController *)getPopover;
+
+
+
 @end

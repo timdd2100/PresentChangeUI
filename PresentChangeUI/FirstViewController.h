@@ -10,4 +10,8 @@
 
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, strong)NSMutableArray *PeopleDataSource;
+@property (nonatomic, strong)NSMutableArray *PresentDataSource;
+
+
 @end

@@ -7,12 +7,40 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after appliction
+    PeopleDataSource = [[NSMutableArray alloc]init];
+    PresentDataSource = [[NSMutableArray alloc]init];
+    
+    //init
+    
+    //共享資料來源
+    FirstViewController *PresentCenter = [FirstViewController new];
+    PresentCenter.PeopleDataSource = PeopleDataSource;
+    PresentCenter.PresentDataSource = PresentDataSource;
+    
+    SecondViewController *People = [SecondViewController new];
+    People.PeopleDataSource = PeopleDataSource;
+    People.PresentDataSource = PresentDataSource;
+    
+
+    
+//    UITabBarController *tabBar = [[UITabBarController alloc]init];
+//    NSArray * temp =  [NSArray arrayWithObjects:PresentCenter, People,Nil];
+//
+//    tabBar.viewControllers = temp;
+//    
+//    [self.window addSubview:tabBar.view];
+//    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 							
