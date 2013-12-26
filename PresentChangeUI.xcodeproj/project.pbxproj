@@ -30,6 +30,7 @@
 		3B3281511869791C004372D2 /* PresentShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3281501869791C004372D2 /* PresentShowViewController.m */; };
 		3B32815418697C09004372D2 /* PresentStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B32815318697C09004372D2 /* PresentStatusViewController.m */; };
 		3B4756D5186A79E7005CF528 /* PeopleAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4756D4186A79E7005CF528 /* PeopleAddViewController.m */; };
+		3B843747186BFFD0009D6958 /* AllPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B843746186BFFD0009D6958 /* AllPeopleViewController.m */; };
 		3B8D6022186AA4AB001D8CBF /* h2s.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B8D6021186AA4AB001D8CBF /* h2s.png */; };
 		3B8D6025186AC650001D8CBF /* TabBarVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D6024186AC650001D8CBF /* TabBarVIewController.m */; };
 		3B8D6028186ACCC9001D8CBF /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D6027186ACCC9001D8CBF /* People.m */; };
@@ -80,6 +81,8 @@
 		3B32815318697C09004372D2 /* PresentStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentStatusViewController.m; sourceTree = "<group>"; };
 		3B4756D3186A79E7005CF528 /* PeopleAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleAddViewController.h; sourceTree = "<group>"; };
 		3B4756D4186A79E7005CF528 /* PeopleAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleAddViewController.m; sourceTree = "<group>"; };
+		3B843745186BFFD0009D6958 /* AllPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllPeopleViewController.h; sourceTree = "<group>"; };
+		3B843746186BFFD0009D6958 /* AllPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllPeopleViewController.m; sourceTree = "<group>"; };
 		3B8D6021186AA4AB001D8CBF /* h2s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2s.png; sourceTree = "<group>"; };
 		3B8D6023186AC650001D8CBF /* TabBarVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarVIewController.h; sourceTree = "<group>"; };
 		3B8D6024186AC650001D8CBF /* TabBarVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarVIewController.m; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				3B32815318697C09004372D2 /* PresentStatusViewController.m */,
 				3B4756D3186A79E7005CF528 /* PeopleAddViewController.h */,
 				3B4756D4186A79E7005CF528 /* PeopleAddViewController.m */,
+				3B843745186BFFD0009D6958 /* AllPeopleViewController.h */,
+				3B843746186BFFD0009D6958 /* AllPeopleViewController.m */,
 			);
 			name = Popover;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B32815418697C09004372D2 /* PresentStatusViewController.m in Sources */,
+				3B843747186BFFD0009D6958 /* AllPeopleViewController.m in Sources */,
 				3B4756D5186A79E7005CF528 /* PeopleAddViewController.m in Sources */,
 				3B32811D18696C04004372D2 /* SecondViewController.m in Sources */,
 				3B8D6028186ACCC9001D8CBF /* People.m in Sources */,
