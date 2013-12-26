@@ -8,7 +8,7 @@
 
 #import "dataSource.h"
 
-static dataSource *source;
+static dataSource *PresentCenter;
 
 
 
@@ -24,23 +24,14 @@ static dataSource *source;
 
 +(id)getDataSource
 {
-    if(source == Nil)
+    if(PresentCenter == Nil)
     {
-        source = [[dataSource alloc] init];
-        source.PeopleDataSource = [NSMutableArray new];
-        source.PresentDataSource = [NSMutableArray new];
+        PresentCenter = [[dataSource alloc] init];
+        PresentCenter.PeopleDataSource = [NSMutableArray new];
+        PresentCenter.PresentDataSource = [NSMutableArray new];
     }
-    return source;
+    return PresentCenter;
 }
 
--(NSMutableArray *)getPeopleDataSource
-{
-    return PeopleDataSource;
-}
-
--(NSMutableArray *)getPresentDataSource
-{
-    return PresentDataSource;
-}
 
 @end

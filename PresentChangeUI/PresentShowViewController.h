@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PresentShowViewController : UIViewController<UIPopoverControllerDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface PresentShowViewController : UIViewController<UIPopoverControllerDelegate,UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate>
 
 @end
