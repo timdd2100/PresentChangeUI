@@ -11,9 +11,12 @@
 @interface People : NSObject
 
 @property NSString  *Name;
+@property id OwnPresent;
 
 -(id)initWithName: (NSString *)name;
 
 -(NSString *) getName;
+
+
 
 @end

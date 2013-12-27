@@ -25,6 +25,7 @@ static UIPopoverController* popAddPeople;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,29 +41,45 @@ static UIPopoverController* popAddPeople;
        避免重複新增Popover
           */
     
-    if (!popAddPeople) {
-        NSLog(@"未有Popover存在");
-        if([[segue identifier] isEqualToString:@"PeopleAddSegue"])
+    
+    if ([[segue identifier] isEqualToString:@"PeopleAddSegue"])
+    {
+        if (!popAddPeople) {
+            NSLog(@"未有Popover存在");
+           
+            popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+                
+           
+        }
+        else
         {
+            NSLog(@"關閉先前的Popover");
+            [popAddPeople dismissPopoverAnimated:YES];
             popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
             
         }
-    }
-    else
-    {
-        NSLog(@"關閉先前的Popover");
-        [popAddPeople dismissPopoverAnimated:YES];
-        popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+        
+        //讓之後的Popover 能操作 原本的ViewController
+        PeopleAddViewController *p = (PeopleAddViewController *)segue.destinationViewController;
+        p.parent = self;
         
     }
     
-    //
-    PeopleAddViewController *p = (PeopleAddViewController *)segue.destinationViewController;
-    p.parent = self;
+    else if([[segue identifier] isEqualToString:@"AllPeoplePopSegue"])
+    {
+          if (!popAddPeople) {
+               popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+          }
+          else
+          {
+              [popAddPeople dismissPopoverAnimated:YES];
+              popAddPeople =  [(UIStoryboardPopoverSegue *)segue popoverController];
+          }
+    }
 }
 
 
-//
+//給子Popover使用
 -(UIPopoverController *)getPopover
 {
     return popAddPeople;

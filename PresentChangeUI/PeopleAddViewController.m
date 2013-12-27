@@ -83,13 +83,23 @@
     */
     dataSource *data = [dataSource getDataSource];
 
-    NSMutableArray *people = data.PeopleDataSource;
-    NSMutableArray *present = data.PresentDataSource;
+    NSMutableArray *peopleArray = data.PeopleDataSource;
+    NSMutableArray *presentArray = data.PresentDataSource;
     
-    [people addObject:[[People alloc]initWithName:LPeopleName.text]];
-    [present addObject:[[Present alloc]initWithName:LPresentName.text]];
+    People *people = [[People alloc]initWithName:LPeopleName.text];
+    Present *present = [[Present alloc]initWithName:LPresentName.text];
+    
+    //建立人員和物品的關係
+    people.OwnPresent = present;
+    present.Owner = people;
+    
+    [peopleArray addObject:people];
+    [presentArray addObject:present];
     
     //呼叫 母viewController 關閉popover
     [[self.parent getPopover] dismissPopoverAnimated:YES];
+    
+    //更新tabBarItem 的數字
+     self.parent.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", [peopleArray count]];
 }
 @end

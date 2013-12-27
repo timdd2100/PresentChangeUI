@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Present : NSObject
+
 @property NSString  *Name;
+@property id Owner;
 
 -(id)initWithName: (NSString *)name;
 

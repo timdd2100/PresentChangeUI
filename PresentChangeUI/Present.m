@@ -9,6 +9,7 @@
 #import "Present.h"
 
 @implementation Present
+@synthesize Owner;
 
 -(id) initWithName:(NSString *)name
 {

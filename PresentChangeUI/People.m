@@ -9,7 +9,7 @@
 #import "People.h"
 
 @implementation People
-
+@synthesize OwnPresent;
 -(id) initWithName:(NSString *)name
 {
     self = [super init];

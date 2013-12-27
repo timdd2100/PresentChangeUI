@@ -8,6 +8,7 @@
 
 #import "AllPeopleViewController.h"
 #import "dataSource.h"
+#import "People.h"
 
 @interface AllPeopleViewController ()
 
@@ -42,19 +43,26 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 
-    dataSource *data = [dataSource getDataSource];
+   dataSource *data = [dataSource getDataSource];
     
    return [[data PeopleDataSource]count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     collectionView.scrollEnabled = YES;
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-   // UIImage *image = []
+    //取得資料來源
+    dataSource *data = [dataSource getDataSource];
     
+    //修改cell上的物件 名字
+   UILabel *label = (UILabel *) [[cell.contentView subviews] objectAtIndex:1];
+    
+    label.text = [(People *)[data.PeopleDataSource objectAtIndex:indexPath.row] Name];
+
     cell.backgroundColor =[UIColor whiteColor];
     return cell;
 }

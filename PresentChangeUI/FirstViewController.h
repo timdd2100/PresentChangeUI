@@ -13,5 +13,7 @@
 @property (nonatomic, strong)NSMutableArray *PeopleDataSource;
 @property (nonatomic, strong)NSMutableArray *PresentDataSource;
 
+@property (weak, nonatomic) IBOutlet UIProgressView *PresentProgress;
+@property (weak, nonatomic) IBOutlet UIImageView *PresentImageView;
 
 @end
