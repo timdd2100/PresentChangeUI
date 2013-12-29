@@ -38,7 +38,7 @@
     PresentDataSource = [[NSMutableArray alloc]init];
     
     
-    //共享資料來源
+    //設定所有的ViewControll共享資料來源
     NSArray *viewControllers = self.viewControllers;
     FirstViewController  *PresentCenter =  (FirstViewController *)[viewControllers objectAtIndex:0];
     

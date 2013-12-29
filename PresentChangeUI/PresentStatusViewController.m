@@ -30,7 +30,7 @@
     
     for (int i = 0 ; i < [data.PresentDataSource count]; i++) {
         
-        Present *present =  [data.PresentDataSource objectAtIndex:0];
+        Present *present =  [data.PresentDataSource objectAtIndex:i];
         
         People *ownpeople = present.Owner;
         

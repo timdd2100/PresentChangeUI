@@ -36,6 +36,8 @@
 		3B8D6028186ACCC9001D8CBF /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D6027186ACCC9001D8CBF /* People.m */; };
 		3B8D602B186AD11A001D8CBF /* Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D602A186AD11A001D8CBF /* Present.m */; };
 		3B8D602E186AD609001D8CBF /* dataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D602D186AD609001D8CBF /* dataSource.m */; };
+		3B96A96118704E67008187EE /* exercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B96A96018704E67008187EE /* exercise.storyboard */; };
+		3B96A96418704F0C008187EE /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B96A96318704F0C008187EE /* ExerciseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		3B8D602A186AD11A001D8CBF /* Present.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Present.m; sourceTree = "<group>"; };
 		3B8D602C186AD609001D8CBF /* dataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataSource.h; sourceTree = "<group>"; };
 		3B8D602D186AD609001D8CBF /* dataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataSource.m; sourceTree = "<group>"; };
+		3B96A96018704E67008187EE /* exercise.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = exercise.storyboard; sourceTree = "<group>"; };
+		3B96A96218704F0C008187EE /* ExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
+		3B96A96318704F0C008187EE /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,7 @@
 				3B8D6023186AC650001D8CBF /* TabBarVIewController.h */,
 				3B8D6024186AC650001D8CBF /* TabBarVIewController.m */,
 				3B32811E18696C04004372D2 /* Images.xcassets */,
+				3B96A95D18704DBB008187EE /* ForExercise */,
 				3B32810A18696C04004372D2 /* Supporting Files */,
 			);
 			path = PresentChangeUI;
@@ -255,6 +261,16 @@
 			name = Present;
 			sourceTree = "<group>";
 		};
+		3B96A95D18704DBB008187EE /* ForExercise */ = {
+			isa = PBXGroup;
+			children = (
+				3B96A96018704E67008187EE /* exercise.storyboard */,
+				3B96A96218704F0C008187EE /* ExerciseViewController.h */,
+				3B96A96318704F0C008187EE /* ExerciseViewController.m */,
+			);
+			name = ForExercise;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,6 +349,7 @@
 			files = (
 				3B8D6022186AA4AB001D8CBF /* h2s.png in Resources */,
 				3B32811F18696C04004372D2 /* Images.xcassets in Resources */,
+				3B96A96118704E67008187EE /* exercise.storyboard in Resources */,
 				3B32810E18696C04004372D2 /* InfoPlist.strings in Resources */,
 				3B32813F18696FB7004372D2 /* presentcenter.jpg in Resources */,
 				3B32814618697387004372D2 /* h2.jpeg in Resources */,
@@ -358,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B96A96418704F0C008187EE /* ExerciseViewController.m in Sources */,
 				3B32815418697C09004372D2 /* PresentStatusViewController.m in Sources */,
 				3B843747186BFFD0009D6958 /* AllPeopleViewController.m in Sources */,
 				3B4756D5186A79E7005CF528 /* PeopleAddViewController.m in Sources */,

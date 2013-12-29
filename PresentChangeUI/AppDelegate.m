@@ -14,7 +14,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after appliction
+    
+    /*以前XIB的寫法
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    self.viewController = [[[xxxController alloc] initWithNibName:@"xxxViewController" bundle:nil] autorelease];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+    */
+    
+    
+    /*StoryBoard的寫法
+     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"exercise" bundle:nil];
+     UIViewController * controller = [storyboard instantiateViewControllerWithIdentifier:@"ExerciseViewController"];
+     self.window.rootViewController = controller;
+     
+     return YES;
+    */
+
+    /*
+    PresentChange Used
+     ===================
+    */
+    
     PeopleDataSource = [[NSMutableArray alloc]init];
     PresentDataSource = [[NSMutableArray alloc]init];
     
@@ -28,20 +51,9 @@
     SecondViewController *People = [SecondViewController new];
     People.PeopleDataSource = PeopleDataSource;
     People.PresentDataSource = PresentDataSource;
-    
-
-    
-//    UITabBarController *tabBar = [[UITabBarController alloc]init];
-//    NSArray * temp =  [NSArray arrayWithObjects:PresentCenter, People,Nil];
-//
-//    tabBar.viewControllers = temp;
-//    
-//    [self.window addSubview:tabBar.view];
-//    [self.window makeKeyAndVisible];
-    
-    
-    
+    //==================
     return YES;
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

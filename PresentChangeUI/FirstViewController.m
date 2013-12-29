@@ -83,8 +83,6 @@
     {
         showPopover = [(UIStoryboardPopoverSegue *)segue popoverController];
         
-        //[showPopover passthroughViews];
-        //[showPopover setDelegate:(id<UIPopoverControllerDelegate>)];
     }
 }
 
