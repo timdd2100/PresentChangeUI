@@ -60,6 +60,7 @@
     
     PresentStatusViewController *statusPop = [self.storyboard instantiateViewControllerWithIdentifier:@"PresentStatusViewController"];
     
+     //TODO  宣告Popover
     statusPopover = [[UIPopoverController alloc]initWithContentViewController:statusPop];
     
 
@@ -70,6 +71,7 @@
      [statusPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *) permittedArrowDirections:(UIPopoverArrowDirection) animated:(BOOL)];
      */
     
+     //TODO  讓Popover長出
     //從按鈕上長出 方向是auto
     [statusPopover presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     
