@@ -8,7 +8,6 @@
 
 #import "dataSource.h"
 
-static dataSource *PresentCenter;
 
 
 
@@ -24,13 +23,22 @@ static dataSource *PresentCenter;
 
 +(id)getDataSource
 {
-    if(PresentCenter == Nil)
-    {
+    static dataSource *PresentCenter = Nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         PresentCenter = [[dataSource alloc] init];
-        PresentCenter.PeopleDataSource = [NSMutableArray new];
-        PresentCenter.PresentDataSource = [NSMutableArray new];
-    }
+    });
+    
     return PresentCenter;
+}
+
+-(id)init
+{
+    if (self = [super init]) {
+        self.PeopleDataSource = [NSMutableArray new];
+        self.PresentDataSource = [NSMutableArray new];
+    }
+    return self;
 }
 
 
