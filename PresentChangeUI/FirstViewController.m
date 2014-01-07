@@ -84,6 +84,7 @@
     if ([[segue identifier] isEqualToString:@"PresentShowSegue"])
     {
         showPopover = [(UIStoryboardPopoverSegue *)segue popoverController];
+        //showPopover.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
     }
 }
 
