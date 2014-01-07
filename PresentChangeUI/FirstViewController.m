@@ -84,7 +84,6 @@
     if ([[segue identifier] isEqualToString:@"PresentShowSegue"])
     {
         showPopover = [(UIStoryboardPopoverSegue *)segue popoverController];
-        
     }
 }
 
