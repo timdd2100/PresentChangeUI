@@ -111,13 +111,13 @@
         dataSource *source = [dataSource getDataSource];
         
         NSArray *Peoples = source.PeopleDataSource;
-        int count = [Peoples count];
+        unsigned long count = [Peoples count];
         
         //隨機亂數取好
         if(count > 0)
         {
             randomResult  = [NSMutableArray new];
-            [self RandomNum:count];
+            [self RandomNum:(int)count];
             
             for (int i = 0 ; i < [randomResult count]; i++) {
                 [self setPresent:[Peoples objectAtIndex:i] withPresent:  [source.PresentDataSource objectAtIndex:[[randomResult objectAtIndex:i] integerValue]]];
@@ -179,7 +179,7 @@
     for (int i = 0; i <count; i++) {
         NSInteger a1 =  result[i];
         
-        NSString *s = [NSString stringWithFormat:@"%i", a1];
+        NSString *s = [NSString stringWithFormat:@"%li", (long)a1];
         
         [randomResult addObject:s];
     }

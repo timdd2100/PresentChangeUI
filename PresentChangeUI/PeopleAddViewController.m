@@ -100,6 +100,6 @@
     [[self.parent getPopover] dismissPopoverAnimated:YES];
     
     //更新tabBarItem 的數字
-     self.parent.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", [peopleArray count]];
+     self.parent.tabBarItem.badgeValue = [NSString stringWithFormat:@"%lu", (unsigned long)[peopleArray count]];
 }
 @end

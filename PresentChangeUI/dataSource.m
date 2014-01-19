@@ -30,16 +30,12 @@ static dataSource *PresentCenter  = nil;
 
 //Override init
 - (id)init {
-
-    static dataSource *PresentCenter = Nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        PresentCenter = [[dataSource alloc] init];
-    });
-    
-    return PresentCenter;
+    self = [super init];
+    if (self) {
+        PeopleDataSource  = [NSMutableArray new];
+        PresentDataSource = [NSMutableArray new];
+    }
+    return self;
 }
-
-
 
 @end
